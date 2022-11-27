@@ -31,7 +31,7 @@ const AppliMap = () => {
       <section id="application" className="text-gray-600 body-font ">
         <div className="absolute inset-0 bg-gray-300">
           <iframe
-            style="filter: grayscale(1), contrast(1.2), opacity(0.4);"
+            // style="filter: grayscale(1), contrast(1.2), opacity(0.4);"
             width="100%"
             height="100%"
             loading="lazy"

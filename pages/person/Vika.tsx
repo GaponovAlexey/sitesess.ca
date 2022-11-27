@@ -1,4 +1,4 @@
-import s from "../scss/personal.module.scss";
+import s from "../../styles/personal.module.scss";
 
 const Viktoria = () => {
   return (

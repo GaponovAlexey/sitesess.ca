@@ -2,11 +2,11 @@ import s from "../scss/personal.module.scss";
 
 const Viktoria = () => {
   return (
-    <div class={s.personal_v}>
-      <div class={s.wrapper}>
-        <div class={s.top_block}>
+    <div className={s.personal_v}>
+      <div className={s.wrapper}>
+        <div className={s.top_block}>
           <div>
-            <div class={s.top_img}></div>
+            <div className={s.top_img}></div>
             <h1>Viktoria Karpova</h1>
             <h2>SEO Product Manager at Sitesess.ca</h2>
             <h3>

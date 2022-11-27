@@ -2,11 +2,11 @@ import s from "../scss/personal.module.scss";
 
 const Gapon = () => {
   return (
-    <div class={s.personal_a}>
-      <div class={s.wrapper}>
-        <div class={s.top_block}>
+    <div className={s.personal_a}>
+      <div className={s.wrapper}>
+        <div className={s.top_block}>
           <div>
-            <div class={s.top_img}></div>
+            <div className={s.top_img}></div>
             <h1>Alexey Gaponov</h1>
             <h2>Main developer at Sitesess.ca</h2>
             <h3>

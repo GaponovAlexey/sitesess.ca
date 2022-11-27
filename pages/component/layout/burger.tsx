@@ -87,8 +87,8 @@ const SlowScroll = () =>
     const scrollTo = function () {
       const links = document.querySelectorAll(".js-scroll");
       links.forEach((each) => {
-        each.addEventListener("click", function () {
-          const currentTarget = this.getAttribute("href");
+        each.addEventListener<any>("click", function (any): void {
+          const currentTarget = this.getAttribute("href") as any
           smoothScroll(currentTarget, 1000);
         });
       });

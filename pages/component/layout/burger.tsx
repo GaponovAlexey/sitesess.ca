@@ -7,6 +7,7 @@ function Burger({ setIsOpen }: any) {
   const loc = useRouter();
   // Scroll to anchors
   SlowScroll();
+  
   return (
     <div className={s.burger_main}>
       <section className={s.burger_wrapper}>

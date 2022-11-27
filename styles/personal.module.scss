@@ -14,7 +14,7 @@
         @apply text-sm text-gray-500;
       }
       .top_img {
-        background: url("../assets/photo/a-min.jpg") center / cover;
+        background: url("../public/assets/photo/a-min.jpg") center / cover;
         @apply rounded-full bg-gray-400 h-28 w-28 mb-5;
       }
     }
@@ -36,7 +36,7 @@
         @apply text-sm text-gray-500;
       }
       .top_img {
-        background: url("../assets/photo/v-min.jpg") 0% / cover;
+        background: url("../public/assets/photo/v-min.jpg") 0% / cover;
         @apply rounded-full bg-gray-400 h-28 w-28 mb-5;
       }
     }

@@ -21,7 +21,7 @@ const AnswerBlock = () => {
             >
               <div>
                 <p className="text-gray-800 dark:text-gray-200">
-                  <em>This is the third item's accordion body.</em> It is hidden
+                  <em>text.</em> It is hidden
                   by default, until the collapse plugin adds the appropriate
                   classes that we use to style each element. These classes
                   control the overall appearance, as well as the showing and
@@ -45,7 +45,7 @@ const AnswerBlock = () => {
               aria-labelledby="hs-basic-heading-two"
             >
               <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third item's accordion body.</em> It is hidden
+                <em>This is the third text accordion body.</em> It is hidden
                 by default, until the collapse plugin adds the appropriate
                 classes that we use to style each element. These classes control
                 the overall appearance, as well as the showing and hiding via
@@ -68,7 +68,7 @@ const AnswerBlock = () => {
               aria-labelledby="hs-basic-heading-three"
             >
               <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third item's accordion body.</em> It is hidden
+                <em>This is the third item accordion body.</em> It is hidden
                 by default, until the collapse plugin adds the appropriate
                 classes that we use to style each element. These classes control
                 the overall appearance, as well as the showing and hiding via

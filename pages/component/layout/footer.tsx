@@ -1,4 +1,4 @@
-import s from "../../../styles/layout.module.scss";
+import s from "../../../styles/layout.module.scss"
 const Footer = () => {
   return (
     <div className={s.footer_main}>
@@ -11,7 +11,7 @@ const Footer = () => {
       <h3>Contacts</h3>
       <div>email: email@gmail.com </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

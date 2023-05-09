@@ -1,100 +1,63 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useLayoutEffect } from "react";
-import s from "../../../styles/layout.module.scss";
+import Link from "next/link"
+import { useRouter } from "next/router"
+import s from "../../../styles/layout.module.scss"
+import ScrollPath from "../utils/ScrollPath"
 
-function Burger({ setIsOpen }: any) {
-  const loc = useRouter();
+function Burger({ setIsOpen }) {
+  const loc = useRouter()
   // Scroll to anchors
-  SlowScroll();
-  
+
   return (
     <div className={s.burger_main}>
       <section className={s.burger_wrapper}>
         <div onClick={() => setIsOpen(false)} className={s.burger_routs}>
           {loc.pathname == "/" ? (
-            <Link href="#home" className="js-scroll">
-              Home
-            </Link>
+            <ScrollPath to="home">
+              <div onClick={() => setIsOpen(false)}>Home</div>
+            </ScrollPath>
           ) : (
-            <Link href="/">Home</Link>
+            <ScrollPath to="home">
+              <div onClick={() => setIsOpen(false)}>Home</div>
+            </ScrollPath>
           )}
           {loc.pathname == "/" ? (
-            <a href="#landing" className="js-scroll">
-              landing
-            </a>
+            <ScrollPath to="landing">
+              <div onClick={() => setIsOpen(false)}>landing</div>
+            </ScrollPath>
           ) : (
-            <Link href="/#landing">landing</Link>
+            <ScrollPath to="landing">
+              <div onClick={() => setIsOpen(false)}>landing</div>
+            </ScrollPath>
           )}
           {loc.pathname == "/" ? (
-            <a href="#strengths" className="js-scroll">
-              Our strengths
-            </a>
+            <ScrollPath to="strengths">
+              <div onClick={() => setIsOpen(false)}>Our strengths</div>
+            </ScrollPath>
           ) : (
-            <Link href="/#strengths">Our strengths</Link>
+            <ScrollPath to="strengths">
+              <div onClick={() => setIsOpen(false)}>Our strengths</div>
+            </ScrollPath>
           )}
           {loc.pathname == "/" ? (
-            <a href="#application" className="js-scroll">
-              Contact the manager
-            </a>
+            <ScrollPath to="application">
+              <div onClick={() => setIsOpen(false)}>Contact the manager</div>
+            </ScrollPath>
           ) : (
-            <Link href="/#application">Contact the manager</Link>
+            <ScrollPath to="application">
+              <div onClick={() => setIsOpen(false)}>Contact the manager</div>
+            </ScrollPath>
           )}
           {loc.pathname == "/" ? (
-            <a href="#marketing" className="js-scroll">
-              Marketing
-            </a>
+            <ScrollPath to="marketing">
+              <div onClick={() => setIsOpen(false)}>Marketing</div>
+            </ScrollPath>
           ) : (
-            <Link href="/#marketing">Marketing</Link>
+            <ScrollPath to="marketing">Marketing</ScrollPath>
           )}
-          {/* right */}
-          <Link href="/team">Team</Link>
         </div>
-        {/* ico */}
       </section>
-      <section
-        className=" w-screen h-full cursor-pointer  "
-        onClick={() => setIsOpen(false)}
-      ></section>
     </div>
-  );
+  )
 }
 
-const SlowScroll = () =>
-  useLayoutEffect(() => {
-    const smoothScroll = function (targetEl: any, duration: any) {
-      let target = document.querySelector(targetEl);
-      let targetPosition = target.getBoundingClientRect().top;
-      let startPosition = window.pageYOffset;
-      let startTime = null as any;
-
-      const ease = function (t: any, b: any, c: any, d: any) {
-        t /= d / 2;
-        if (t < 1) return (c / 2) * t * t + b;
-        t--;
-        return (-c / 2) * (t * (t - 2) - 1) + b;
-      };
-
-      const animation = function (currentTime: any) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, targetPosition, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      };
-      requestAnimationFrame(animation);
-    };
-
-    const scrollTo = function () {
-      const links = document.querySelectorAll(".js-scroll");
-      links.forEach((each) => {
-        each.addEventListener<any>("click", function (any): void {
-          const currentTarget = this.getAttribute("href") as any
-          smoothScroll(currentTarget, 1000);
-        });
-      });
-    };
-    scrollTo();
-  });
-
-export default Burger;
+export default Burger

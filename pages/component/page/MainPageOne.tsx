@@ -1,6 +1,6 @@
-import CustomBut from "../utils/CustomBut";
-import s from "../../../styles/main.module.scss";
-import Link from "next/link";
+import CustomBut from "../utils/CustomBut"
+import s from "../../../styles/main.module.scss"
+import ScrollPath from "../utils/ScrollPath"
 
 const MainPageOne = () => {
   return (
@@ -10,15 +10,15 @@ const MainPageOne = () => {
         <h1>Sitesess.ca</h1>
         <h2>We Know You Are Passionate About Your Small Business</h2>
         <h4>We help businesses turn ideas into effective products</h4>
-        <div className="text-center pt-10 hover:scroll-auto">
-          <Link href="#application" className="js-scroll ">
+        <div className="text-center pt-10 hover:scroll-auto ">
+          <ScrollPath to="application">
             <CustomBut name="Connect us" />
-          </Link>
+          </ScrollPath>
         </div>
       </div>
       <div className={s.main_img}></div>
     </div>
-  );
-};
+  )
+}
 
-export default MainPageOne;
+export default MainPageOne

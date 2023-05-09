@@ -7,7 +7,7 @@ const AppliMap = () => {
   const usersColRef = collection(db, "users");
   const [name, setName] = useState<string>("");
   const [company, setCompany] = useState<string>("");
-  const [number, setNumber] = useState<any | null>(null);
+  const [number, setNumber] = useState<any | null>(0);
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 

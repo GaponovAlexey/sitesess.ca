@@ -13,7 +13,7 @@ const Main = () => {
   return (
     <Layout>
       <MainPageOne />
-      <PageWhite />
+      {/* <PageWhite /> */}
       <LandingUse />
       <OurStrengths />
       <AppliMap />

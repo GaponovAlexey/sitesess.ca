@@ -1,10 +1,10 @@
 .container_main {
   @apply min-h-screen;
   div {
-    h3 {
+    .devLogoText {
       @apply pt-52 sm:pt-44 text-center;
     }
-    h1 {
+    .logoText {
       @apply text-center tracking-widest font-bold sm:text-3xl text-[32px];
     }
     h2 {
@@ -118,48 +118,15 @@
   }
 }
 
-.main_marketing {
-  @apply min-h-screen bg-[#111111]  text-white;
-  .marketing_page {
-    @apply min-h-screen;
-    .marketing_info {
-      @apply pt-16 px-5 leading-relaxed;
-      h2 {
-        @apply pb-10 text-2xl  sm:text-xl text-indigo-400 text-center;
-      }
-      p {
-        @apply  lg:w-2/3 mx-auto sm:text-sm leading-relaxed text-base;
-      }
-    }
-    .marketing_top_page {
-      @apply transition-all sm:pt-5 pt-20 grid grid-cols-2 sm:grid-cols-1 text-center;
-      h3 {
-        @apply sm:pt-10 text-3xl;
-      }
-    }
-    a {
-      @apply relative cursor-pointer;
-    }
-    a:after {
-      @apply block absolute left-0 right-0 w-0 h-[1px] bg-sky-400 content-[''] ease-in duration-300;
-    }
-    a:hover:after,
-    a:focus:after {
-      @apply w-full;
-    }
-    .info_marketing_services {
-      @apply px-12 text-xl text-green-300 lg:w-3/4 mx-auto sm:text-sm leading-relaxed;
-      .list_services {
-        @apply text-center mt-10;
-      }
-    }
-  }
-  .marketing_map {
-    @apply min-h-full sm:pt-32 bg-red-200 pt-[20rem];
-    background: no-repeat url("../public/assets/svg/m2.svg") 50% / contain;
+.marketing_map {
+  @apply min-h-full sm:pt-32 bg-red-200 pt-[20rem];
+  background: no-repeat url("../public/assets/svg/m2.svg") 50% / contain;
 
-    .marketing_bot_content {
-      @apply flex justify-center pt-20;
-    }
+  .marketing_bot_content {
+    @apply flex justify-center pt-20;
   }
+}
+.answerWrapper {
+  @apply grid grid-cols-2 h-screen;
+  background: url("../public/assets/yes/lamps-min.webp") 0% / cover;
 }

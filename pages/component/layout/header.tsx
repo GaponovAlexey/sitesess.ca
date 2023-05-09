@@ -3,7 +3,7 @@ import s from "../../../styles/layout.module.scss"
 import Burger from "./burger"
 
 const Header = () => {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   return (
     <div className={s.header_main}>

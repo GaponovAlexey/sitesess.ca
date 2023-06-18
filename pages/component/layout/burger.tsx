@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { useRouter } from "next/router"
 import s from "../../../styles/layout.module.scss"
 import ScrollPath from "../utils/ScrollPath"

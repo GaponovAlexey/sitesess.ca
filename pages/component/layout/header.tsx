@@ -12,11 +12,7 @@ const Header = () => {
           onClick={() => setOpen((p) => (p = !p))}
           className={`${open && "open transition-all"}`}
           id="nav-icon1"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        ></div>
         {open && <Burger setIsOpen={setOpen} />}
       </span>
     </div>

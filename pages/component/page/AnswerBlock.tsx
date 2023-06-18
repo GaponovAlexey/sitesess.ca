@@ -2,184 +2,115 @@
 import { useState } from "react"
 import s from "../../../styles/main.module.scss"
 
+const DataAccordion = [
+  {
+    id: 1,
+    title: "FAQ:",
+    body: `<em>text.</em> It is hidden by default, until the collapse
+  plugin adds the appropriate classes that we use to style each
+  element. These classes control the overall appearance, as well
+  as the showing and hiding via CSS transitions.`,
+  },
+  {
+    id: 2,
+    title: "Product Descriptions: ",
+    body: `<em>text.</em> It is hidden by default, until the collapse
+  plugin adds the appropriate classes that we use to style each
+  element. These classes control the overall appearance, as well
+  as the showing and hiding via CSS transitions.`,
+  },
+  {
+    id: 3,
+    title: "Workflow:",
+    body: `<em>text.</em> It is hidden by default, until the collapse
+  plugin adds the appropriate classes that we use to style each
+  element. These classes control the overall appearance, as well
+  as the showing and hiding via CSS transitions.`,
+  },
+  {
+    id: 4,
+    title: "Terms and Conditions: ",
+    body: `<em>text.</em> It is hidden by default, until the collapse
+  plugin adds the appropriate classes that we use to style each
+  element. These classes control the overall appearance, as well
+  as the showing and hiding via CSS transitions.`,
+  },
+  {
+    id: 5,
+    title: "Accordion 5",
+    body: `<em>text.</em> It is hidden by default, until the collapse
+  plugin adds the appropriate classes that we use to style each
+  element. These classes control the overall appearance, as well
+  as the showing and hiding via CSS transitions.`,
+  },
+  {
+    id: 6,
+    title: "Accordion 6",
+    body: `<em>text.</em> It is hidden by default, until the collapse
+  plugin adds the appropriate classes that we use to style each
+  element. These classes control the overall appearance, as well
+  as the showing and hiding via CSS transitions.`,
+  },
+  {
+    id: 7,
+    title: "Accordion 7",
+    body: `<em>text.</em> It is hidden by default, until the collapse
+  plugin adds the appropriate classes that we use to style each
+  element. These classes control the overall appearance, as well
+  as the showing and hiding via CSS transitions.`,
+  },
+  {
+    id: 8,
+    title: "Accordion 8",
+    body: `<em>text.</em> It is hidden by default, until the collapse
+  plugin adds the appropriate classes that we use to style each
+  element. These classes control the overall appearance, as well
+  as the showing and hiding via CSS transitions.`,
+  },
+]
+
 const AnswerBlock = () => {
-  const [isActive1, setIsActive1] = useState(false)
-  const [isActive2, setIsActive2] = useState(false)
-  const [isActive3, setIsActive3] = useState(false)
-  const [isActive4, setIsActive4] = useState(false)
-  const [isActive5, setIsActive5] = useState(false)
-  const [isActive6, setIsActive6] = useState(false)
+  const [activeAccordion, setActiveAccordion] = useState(null)
 
   return (
     <div className={s.answerWrapper}>
-      <div>
-        <div className="hs-accordion-group">
-          <div className="hs-accordion active" id="hs-basic-heading-one">
-            <button
-              className="hs-accordion-toggle hs-accordion-active:text-blue-600
-               group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left
-                text-gray-400 transition hover:text-gray-100 dark:hs-accordion-active:text-blue-500
-                 dark:text-gray-100 dark:hover:text-gray-100"
-              aria-controls="hs-basic-collapse-one"
-              onClick={() => setIsActive1(!isActive1)}
-            >
-              <ElementSvg />
-              Accordion #1
-            </button>
-            <div
-              id="hs-basic-collapse-one"
-              className={`${
-                isActive1 ? "" : "hidden"
-              } hs-accordion-content  w-full overflow-hidden transition-[height] duration-300`}
-              aria-labelledby="hs-basic-heading-one"
-            >
-              <div>
-                <p className="text-gray-800 dark:text-gray-200">
-                  <em>text.</em> It is hidden by default, until the collapse
-                  plugin adds the appropriate classes that we use to style each
-                  element. These classes control the overall appearance, as well
-                  as the showing and hiding via CSS transitions.
-                </p>
+      {DataAccordion.map((accord) => {
+        return (
+          <div key={accord.id} className="hs-accordion-group pl-32 pt-10">
+            <div className="hs-accordion " id={`hs-basic-heading-${accord.id}`}>
+              <button
+                className="hs-accordion-toggle hs-accordion-active:text-blue-600
+            group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left
+            text-gray-800 transition hover:text-gray-500 dark:hs-accordion-active:text-blue-500
+            dark:text-gray-200 dark:hover:text-gray-400"
+                aria-controls={`hs-basic-collapse-${accord.id}`}
+                onClick={() =>
+                  setActiveAccordion(
+                    accord.id === activeAccordion ? null : accord.id,
+                  )
+                }
+              >
+                <ElementSvg />
+                {accord.title}
+              </button>
+              <div
+                id={`hs-basic-collapse-${accord.id}`}
+                className={`${
+                  activeAccordion === accord.id ? "" : "hidden"
+                } hs-accordion-content  overflow-hidden transition-[height] duration-300`}
+                aria-labelledby={`hs-basic-heading-${accord.id}`}
+              >
+                <div>
+                  <p
+                    className="text-gray-800 max-w-[30rem] dark:text-gray-200"
+                    dangerouslySetInnerHTML={{ __html: accord.body }}
+                  ></p>
+                </div>
               </div>
             </div>
           </div>
-
-          <div className="hs-accordion" id="hs-basic-heading-two">
-            <button
-              className="hs-accordion-toggle hs-accordion-active:text-blue-600
-               group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left
-                text-gray-800 transition hover:text-gray-500 dark:hs-accordion-active:text-blue-500
-                 dark:text-gray-200 dark:hover:text-gray-400"
-              aria-controls="hs-basic-collapse-two"
-              onClick={() => setIsActive2(!isActive2)}
-            >
-              <ElementSvg />
-              Accordion #2
-            </button>
-            <div
-              id="hs-basic-collapse-two"
-              className={`${
-                isActive2 ? "" : "hidden"
-              } hs-accordion-content  w-full overflow-hidden transition-[height] duration-300`}
-              aria-labelledby="hs-basic-heading-two"
-            >
-              <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third text accordion body.</em> It is hidden by
-                default, until the collapse plugin adds the appropriate classes
-                that we use to style each element. These classes control the
-                overall appearance, as well as the showing and hiding via CSS
-                transitions.
-              </p>
-            </div>
-          </div>
-
-          <div className="hs-accordion" id="hs-basic-heading-three">
-            <button
-              className="hs-accordion-toggle hs-accordion-active:text-blue-600 group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400"
-              aria-controls="hs-basic-collapse-three"
-              onClick={() => setIsActive3(!isActive3)}
-            >
-              <ElementSvg />
-              Accordion #3
-            </button>
-            <div
-              id="hs-basic-collapse-three"
-              className={`${
-                isActive3 ? "" : "hidden"
-              } hs-accordion-content  w-full overflow-hidden transition-[height] duration-300`}
-              aria-labelledby="hs-basic-heading-three"
-            >
-              <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third item accordion body.</em> It is hidden by
-                default, until the collapse plugin adds the appropriate classes
-                that we use to style each element. These classes control the
-                overall appearance, as well as the showing and hiding via CSS
-                transitions.
-              </p>
-            </div>
-          </div>
-          
-          <div className="hs-accordion" id="hs-basic-heading-three">
-            <button
-              className="hs-accordion-toggle hs-accordion-active:text-blue-600 group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400"
-              aria-controls="hs-basic-collapse-three"
-              onClick={() => setIsActive4(!isActive4)}
-            >
-              <ElementSvg />
-              Accordion #4
-            </button>
-            <div
-              id="hs-basic-collapse-three"
-              className={`${
-                isActive4 ? "" : "hidden"
-              } hs-accordion-content  w-full overflow-hidden transition-[height] duration-300`}
-              aria-labelledby="hs-basic-heading-three"
-            >
-              <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third item accordion body.</em> It is hidden by
-                default, until the collapse plugin adds the appropriate classes
-                that we use to style each element. These classes control the
-                overall appearance, as well as the showing and hiding via CSS
-                transitions.
-              </p>
-            </div>
-          </div>
-
-          <div className="hs-accordion" id="hs-basic-heading-three">
-            <button
-              className="hs-accordion-toggle hs-accordion-active:text-blue-600 group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400"
-              aria-controls="hs-basic-collapse-three"
-              onClick={() => setIsActive5(!isActive5)}
-            >
-              <ElementSvg />
-              Accordion #5
-            </button>
-            <div
-              id="hs-basic-collapse-three"
-              className={`${
-                isActive5 ? "" : "hidden"
-              } hs-accordion-content  w-full overflow-hidden transition-[height] duration-300`}
-              aria-labelledby="hs-basic-heading-three"
-            >
-              <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third item accordion body.</em> It is hidden by
-                default, until the collapse plugin adds the appropriate classes
-                that we use to style each element. These classes control the
-                overall appearance, as well as the showing and hiding via CSS
-                transitions.
-              </p>
-            </div>
-          </div>
-
-          <div className="hs-accordion" id="hs-basic-heading-three">
-            <button
-              className="hs-accordion-toggle hs-accordion-active:text-blue-600 group py-3 inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition hover:text-gray-500 dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400"
-              aria-controls="hs-basic-collapse-three"
-              onClick={() => setIsActive6(!isActive6)}
-            >
-              <ElementSvg />
-              Accordion #6
-            </button>
-            <div
-              id="hs-basic-collapse-three"
-              className={`${
-                isActive6 ? "" : "hidden"
-              } hs-accordion-content  w-full overflow-hidden transition-[height] duration-300`}
-              aria-labelledby="hs-basic-heading-three"
-            >
-              <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third item accordion body.</em> It is hidden by
-                default, until the collapse plugin adds the appropriate classes
-                that we use to style each element. These classes control the
-                overall appearance, as well as the showing and hiding via CSS
-                transitions.
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* <LandingUse /> */}
-      </div>
-      <div>two</div>
+        )
+      })}
     </div>
   )
 }

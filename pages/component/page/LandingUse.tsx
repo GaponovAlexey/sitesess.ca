@@ -1,11 +1,11 @@
-import s from "../../../styles/main.module.scss";
+import s from "../../../styles/main.module.scss"
 
 const LandingUse = () => {
   return (
-    <section id='landing' className={s.landing_main}>
+    <section id="landing" className={s.landing_main}>
       <div className={s.landing_use}>
         <div className={s.landing_use_top}>
-          <h2 className="text-red-200" >Why you need a website for your business</h2>
+          <h2>Why you need a website for your business</h2>
           <h1>A website makes you look professional</h1>
           <p>
             84% of today’s consumers think a website makes your business more
@@ -75,7 +75,7 @@ const LandingUse = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default LandingUse;
+export default LandingUse

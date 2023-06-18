@@ -1,4 +1,3 @@
-import LandingUse from "./LandingUse"
 import s from "../../../styles/main.module.scss"
 
 const AnswerBlock = () => {
@@ -21,11 +20,10 @@ const AnswerBlock = () => {
             >
               <div>
                 <p className="text-gray-800 dark:text-gray-200">
-                  <em>text.</em> It is hidden
-                  by default, until the collapse plugin adds the appropriate
-                  classes that we use to style each element. These classes
-                  control the overall appearance, as well as the showing and
-                  hiding via CSS transitions.
+                  <em>text.</em> It is hidden by default, until the collapse
+                  plugin adds the appropriate classes that we use to style each
+                  element. These classes control the overall appearance, as well
+                  as the showing and hiding via CSS transitions.
                 </p>
               </div>
             </div>
@@ -45,11 +43,11 @@ const AnswerBlock = () => {
               aria-labelledby="hs-basic-heading-two"
             >
               <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third text accordion body.</em> It is hidden
-                by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions.
+                <em>This is the third text accordion body.</em> It is hidden by
+                default, until the collapse plugin adds the appropriate classes
+                that we use to style each element. These classes control the
+                overall appearance, as well as the showing and hiding via CSS
+                transitions.
               </p>
             </div>
           </div>
@@ -68,11 +66,11 @@ const AnswerBlock = () => {
               aria-labelledby="hs-basic-heading-three"
             >
               <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third item accordion body.</em> It is hidden
-                by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions.
+                <em>This is the third item accordion body.</em> It is hidden by
+                default, until the collapse plugin adds the appropriate classes
+                that we use to style each element. These classes control the
+                overall appearance, as well as the showing and hiding via CSS
+                transitions.
               </p>
             </div>
           </div>
@@ -100,14 +98,14 @@ const ElementSvg = () => {
         <path
           d="M2.62421 7.86L13.6242 7.85999"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
         <path
           d="M8.12421 13.36V2.35999"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
       </svg>
       <svg
@@ -121,8 +119,8 @@ const ElementSvg = () => {
         <path
           d="M2.62421 7.86L13.6242 7.85999"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
       </svg>
     </>

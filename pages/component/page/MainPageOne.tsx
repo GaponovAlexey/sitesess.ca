@@ -9,27 +9,44 @@ const MainPageOne = () => {
       <div id="home">
         <motion.div
           className={s.devLogoText}
-          initial={{ y: -400 }}
-          animate={{ y: 0 }}
+          initial={{ x: -400 }}
+          animate={{ x: 0 }}
           transition={{ delay: 0.2 }}
         >
           The development company
         </motion.div>
         <motion.div
           className={s.logoText}
-          initial={{ y: -400 }}
-          animate={{ y: 0 }}
+          initial={{ x: +400 }}
+          animate={{ x: 0 }}
           transition={{ delay: 0.1 }}
         >
           Sitesess.ca
         </motion.div>
-        <h2>We Know You Are Passionate About Your Small Business</h2>
-        <h4>We help businesses turn ideas into effective products</h4>
-        <div className="text-center pt-10 hover:scroll-auto ">
+        <motion.h2
+          initial={{ x: +400 }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          We Know You Are Passionate About Your Small Business
+        </motion.h2>
+        <motion.h4
+          initial={{ x: -400 }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          We help businesses turn ideas into effective products
+        </motion.h4>
+        <motion.div
+          initial={{ y: +400 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 1 }}
+          className="text-center pt-10 hover:scroll-auto "
+        >
           <ScrollPath to="application">
             <CustomBut name="Connect us" />
           </ScrollPath>
-        </div>
+        </motion.div>
       </div>
       <div className={s.main_img}></div>
     </div>

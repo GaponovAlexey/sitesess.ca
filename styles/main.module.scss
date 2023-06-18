@@ -2,10 +2,10 @@
   @apply min-h-screen;
   div {
     .devLogoText {
-      @apply pt-[20%] sm:pt-[85%] text-center;
+      @apply pt-[20%] sm:pt-[85%] text-center text-xl;
     }
     .logoText {
-      @apply text-center tracking-widest font-bold sm:text-3xl text-[32px];
+      @apply text-center tracking-widest font-bold sm:text-3xl text-[42px];
     }
     h2 {
       @apply text-center tracking-widest font-bold sm:text-3xl text-2xl pt-10;

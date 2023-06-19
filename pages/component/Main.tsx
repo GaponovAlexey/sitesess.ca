@@ -10,11 +10,11 @@ const Main = () => {
   return (
     <Layout>
       <MainPageOne />
-      <AnswerBlock />
+      {/* <AnswerBlock />
       <LandingUse />
       <OurStrengths />
       <AppliMap />
-      <Marketing />
+      <Marketing /> */}
     </Layout>
   )
 }
